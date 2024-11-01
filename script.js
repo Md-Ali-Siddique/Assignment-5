@@ -1,5 +1,4 @@
 let accountBalance = 5500;
-
 function updateBalance() {
     document.getElementById('balance').innerText = `${accountBalance} BDT`;
 }
@@ -24,7 +23,7 @@ document.querySelectorAll('.donate-btn').forEach(button => {
             alert('Please enter a valid donation amount.');
             return;
         }
-
+        
         if (donationAmount > accountBalance) {
             alert('Insufficient balance for this donation.');
             return;
@@ -71,7 +70,7 @@ document.getElementById('history-btn').addEventListener('click', function () {
     updateButtonStyles(this, document.getElementById('donation-btn'));
 });
 
-function updateButtonStyles(activeButton, inactiveButton) {
+function updateButtonStyles(activeButton, inactiveButton){
     activeButton.classList.add('btn-white', 'text-white');
     activeButton.classList.remove('bg-white', 'text-black');
     inactiveButton.classList.remove('btn-white', 'text-white');
@@ -88,3 +87,5 @@ document.querySelectorAll('.modal-action button').forEach(button => {
 });
 
 updateTransactionHistory();
+
+document.querySelector('modal-action button').foreach(butto
